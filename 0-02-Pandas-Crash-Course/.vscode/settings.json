@@ -1,0 +1,10 @@
+{
+  "python.pythonPath": "/Users/Shang/opt/miniconda3/envs/mydashenv/bin/python",
+  "python.autoComplete.extraPaths": [
+    "./**"
+  ],
+  "python.analysis.extraPaths": [
+    "./**"
+  ],
+  "python.formatting.provider": "autopep8"
+}
