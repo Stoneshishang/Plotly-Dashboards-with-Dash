@@ -4,6 +4,9 @@ import dash_html_components as html
 
 app = dash.Dash()
 
+# print(help(dash_html_components.Div))
+# or running pydoc -w dash_html_components.Div in the terminal.
+
 markdown_text = '''
 ### Dash and Markdown
 
