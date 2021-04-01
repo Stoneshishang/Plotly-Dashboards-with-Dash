@@ -8,7 +8,7 @@ colors = {'background': '#111111', 'text': '#7FDBFF'}
 
 
 app.layout = html.Div(children=[
-    html.H1('Hello Dash!', style={'textAlgin': 'center',
+    html.H1('Hello Dash!', style={'textAlign': 'center',
                                   'color': colors['text']}),
     # html.Div('Dash:Web Dashboard with Python'),
     dcc.Graph(id='example',
