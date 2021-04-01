@@ -17,25 +17,26 @@ features = df.columns
 
 app.layout = html.Div([
 
-        html.Div([
-            dcc.Dropdown(
-                id='xaxis',
-                options=[{'label': i.title(), 'value': i} for i in features],
-                value='displacement'
-            )
-        ],
+    html.Div([
+        dcc.Dropdown(
+            id='xaxis',
+            options=[{'label': i.title(), 'value': i} for i in features],
+            value='displacement'
+        )
+    ],
         style={'width': '48%', 'display': 'inline-block'}),
 
-        html.Div([
-            dcc.Dropdown(
-                id='yaxis',
-                options=[{'label': i.title(), 'value': i} for i in features],
-                value='acceleration'
-            )
-        ],style={'width': '48%', 'float': 'right', 'display': 'inline-block'}),
+    html.Div([
+        dcc.Dropdown(
+            id='yaxis',
+            options=[{'label': i.title(), 'value': i} for i in features],
+            value='acceleration'
+        )
+    ], style={'width': '48%', 'float': 'right', 'display': 'inline-block'}),
 
     dcc.Graph(id='feature-graphic')
-], style={'padding':10})
+], style={'padding': 10})
+
 
 @app.callback(
     Output('feature-graphic', 'figure'),
@@ -61,6 +62,7 @@ def update_graph(xaxis_name, yaxis_name):
             hovermode='closest'
         )
     }
+
 
 if __name__ == '__main__':
     app.run_server()
