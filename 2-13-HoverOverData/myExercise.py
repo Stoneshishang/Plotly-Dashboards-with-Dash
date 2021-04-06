@@ -37,7 +37,7 @@ app.layout = html.Div([
 
 
 @app.callback(Output('hover-data', 'src'),
-              [Input('wheels-plot', 'hoverData')])
+              [Input('wheels-plot', 'clickData')])
 def callback_image(hoverData):
     wheel = hoverData['points'][0]['y']
     color = hoverData['points'][0]['x']
